@@ -1,35 +1,157 @@
+<!-- TO-DOS:
+   [] Make corner images disappear if screen too small
+
+-->
+
 <html>
 
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 
-
+        <script
+            src="https://code.jquery.com/jquery-3.5.0.js"
+            integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
 
     </head>
 
     <body>
 
-        <div id="header">
-
-            <div class="row col-md-8 offset-md-2">
-                    <div class="col-md-6 row">
-                        <img src="assets/logo.png" class="header-logo">
-                        <p class="logo-text lilita">quarantine4kids</p>
-                    </div>
-                    <div class="col-md-4 offset-md-2 row navpillholder">
-                        <span class="red navtab">register</span>
-                        <span class="blue navtab">donate</span>
-                        <span class="teal navtab">about us</span>
-                    </div>               
+        <!-- NAV BAR -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="row col-md-4 offset-md-2">
+                <img src="assets/logo.png" class="navbar-logo">
+                <p class="logo-text lilita">quarantine4kids</p>
             </div>
+            
+            <div class="collapse navbar-collapse col-md-4" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link navtab red" href="#">register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navtab blue" href="#">donate</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navtab teal" href="#">about us</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
 
+        <!-- TOP SECTION -->
+        <div class="col-md-12 no-padding header">
+            <img src="assets/header-bottom-left.png" class="header-bottom-left-img"/>
+            <img src="assets/header-bottom-right.png" class="header-bottom-right"/>
+            <div class="col-md-8 offset-md-2">
+                <div class="row">
+                    <div class="col-md-6">
+                        image goes here
+                    </div>
+
+                    <div class="col-md-6 header-right-section">
+                        <h1 class="header-big-text">Quarantine isn’t fun ... <br> but drawing and reading is! </h1>
+                        <p class="header-descr-text">We are a group of college students providing
+                            <b>free</b> online Zoom workshops for K-12 students. 
+                            We are raising money for organizations providing 
+                            relief during COVID-19.</p>
+                    </div>
+
+                </div>
+                
+
+            </div>
         </div>
 
+        <!-- HOW IT WORKS -->
+        <div class="col-md-12 no-padding how-it-works">
+            <div class="col-md-8 offset-md-2 how-it-works">
+                <h1 class="lilita white">How Quarantine4Kids Works</h1>
 
+                <div class="col-md-12" style="height: 400px;">
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Available Classes -->
+        <div class="col-md-12 no-padding white-section">
+            <div class="col-md-8 offset-md-2 white-section">
+                <h1 class="lilita black">Available Classes</h1>
+
+                <div class="col-md-12" style="height: 400px;">
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Get involved -->
+        <div class="col-md-12 no-padding get-involved">
+            <div class="col-md-8 offset-md-2 get-involved">
+                <h1 class="lilita white">Get Involved</h1>
+
+                <div class="col-md-12" style="height: 400px;">
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Available Classes -->
+        <div class="col-md-12 no-padding white-section">
+            <div class="col-md-8 offset-md-2 white-section">
+                <h1 class="lilita black">Who we Support</h1>
+
+                <div class="col-md-12" style="height: 400px;">
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="col-md-12 no-padding resources">
+            <div class="col-md-8 offset-md-2 resources">
+                <h1 class="lilita white">Resources</h1>
+
+                <div class="col-md-12" style="height: 400px;">
+
+
+                </div>
+            </div>
+        </div>
+
+         <!-- Footer -->
+         <div class="col-md-12 no-padding">
+
+            <div class="col-md-8 offset-md-2 footer row">
+                <div class="col-md-6">
+                    <p class="footer-text">Our mission is to nourish youth minds
+                        regardless of the circumstance.</p>
+
+                    <p class="footer-text"><b>Donate</b> or <b>volunteer</b> today!</p>
+                </div>
+
+                <div class="col-md-2 offset-md-2">
+                    <p class="footer-tabs"><u>About</u></p>
+                    <p class="footer-tabs">Our Impact</p>
+                    <p class="footer-tabs">The Team</p>
+                </div>
+
+                <div class="col-md-2">
+                    <p class="footer-tabs"><u>Contact</u></p>
+                    <p class="footer-tabs">Email Us</p>
+                    <p class="footer-tabs">Join the Mailing List</p>
+                </div>
+            </div>
+        </div>
 
     </body>
 
