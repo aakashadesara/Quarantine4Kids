@@ -60,7 +60,7 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
-    height: 80%;
+    width: 15%;
 
 }
 
@@ -68,8 +68,25 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 30%;
+    width: 25%;
 }
+
+.header-button {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+}
+
+.header-button:hover {
+    opacity: 0.8;
+    outline: none;
+    border: none;
+}
+
 
 /* how it works */
 .how-it-works {
@@ -80,9 +97,42 @@
 
 /* available classes */
 .white-section {
-    background-color: #FFF;
     padding: 50px;
     padding-top: 80px;
+}
+
+.all-classes-filter {
+    font-size: large;
+}
+
+.available-classes {
+    margin-top: 40px;
+}
+
+.all-classes-divider {
+    font-size: medium;
+}
+
+.class-modal {
+    height: 350px;
+    border-radius: 5px;
+    background-color: #888;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.available-classes-bottom-left {
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    position: absolute;
+}
+
+.available-classes-bottom-right {
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 20%;
 }
 
 /* get involved */
@@ -93,6 +143,24 @@
 }
 
 /* who we support */
+.support-text {
+    font-size: x-large;
+    color: #333431 !important;
+}
+
+.support-bottom-left {
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    position: absolute;
+}
+
+.support-top-right {
+    top: 0;
+    right: 0;
+    width: 15%;
+    position: absolute;
+}
 
 /* resources */
 .resources {
@@ -136,5 +204,29 @@
 
 .black {
     color: #000 !important;
+}
+
+.gray {
+    color: #777;
+}
+
+.red-bg {
+    background-color: #FC515C !important;
+}
+
+.blue-bg {
+    background-color: #4C58E0 !important;
+}
+
+.teal-bg {
+    background-color: #27AAE2 !important;
+}
+
+.white-bg {
+    background-color: #FFF !important;
+}
+
+.black-bg {
+    background-color: #000 !important;
 }
 
