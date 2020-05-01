@@ -58,7 +58,7 @@
 
 .image-header {
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
 }
 
 .header-bottom-left-img {
