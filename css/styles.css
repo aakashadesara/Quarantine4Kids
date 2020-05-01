@@ -38,7 +38,8 @@
 
 /* Header */
 .header {
-    height: 60%;
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
 }
 
 .header-right-section {
