@@ -1,0 +1,48 @@
+* {
+    font-family: 'Lato', sans-serif;
+    color: #333431;
+}
+
+.lilita {
+    font-family: 'Lilita One', cursive;
+}
+
+#header {
+    padding: 10px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.header-logo {
+    height: 70px;
+    width: 70px;
+}
+
+.logo-text {
+    font-size: 30px;
+    font-weight: 'bold';
+    margin-top: 10px;
+}
+
+.navpillholder {
+    text-align: right;
+}
+
+.navtab {
+    margin-top: 15px;
+    font-size: large;
+    margin-left: 30px;
+}
+
+.red {
+    color: #FC515C;
+}
+
+.blue {
+    color: #4C58E0;
+}
+
+.teal {
+    color: #27AAE2;
+}
+
