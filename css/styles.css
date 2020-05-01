@@ -44,7 +44,6 @@
 
 .header-right-section {
     padding: 80px;
-    height: 600px;
 }
 
 .header-big-text {
@@ -56,6 +55,11 @@
     font-size: 20px;
     color: #888;
 } 
+
+.image-header {
+    width: 100% !important;
+    height: 100% !important;
+}
 
 .header-bottom-left-img {
     position: absolute;
@@ -94,6 +98,15 @@
     background-color: #27AAE2;
     padding: 50px;
     padding-top: 80px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.how-divs {
+    text-align: center;
+    color: white !important;
 }
 
 /* available classes */
