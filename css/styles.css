@@ -128,11 +128,27 @@
 }
 
 .class-modal {
-    height: 350px;
     border-radius: 5px;
-    background-color: #888;
-    padding: 10px;
+    background-color: #FFF;
     margin-top: 30px;
+    padding: 0px !important;
+}
+
+.class-modal-img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.signupbutton {
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: smaller;
 }
 
 .available-classes-bottom-left {
@@ -226,6 +242,7 @@
 
 .red-bg {
     background-color: #FC515C !important;
+    border: none;
 }
 
 .blue-bg {

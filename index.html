@@ -10,6 +10,7 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        
 
         <script
             src="https://code.jquery.com/jquery-3.5.0.js"
@@ -19,6 +20,12 @@
         
         <link rel="stylesheet" type="text/css" href="css/styles.css">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+        <script src="scripts/script.js"></script>
+
 
     </head>
 
@@ -121,71 +128,34 @@
 
                 <div class="available-classes row">
                     <div class="col-md-3">
-                        <p class="all-classes-filter"><b>All Classes</b></p>
+                        <p class="all-classes-filter" onclick="allClasses()"><b>All Classes</b></p>
 
                         <br>
 
                         <p class="all-classes-divider gray">CLASS TYPE</p>
                         <hr>
-                        <p class="all-classes-filter"><b>Drawing</b></p>
-                        <p class="all-classes-filter"><b>Reading</b></p>
+                        <p class="all-classes-filter" onclick="drawingClasses()"><b>Drawing</b></p>
+                        <p class="all-classes-filter" onclick="readingClasses()"><b>Reading</b></p>
+                        <p class="all-classes-filter" onclick="craftClasses()"><b>Craft</b></p>
 
                         <br>
 
                         <p class="all-classes-divider gray">AGE GROUP</p>
                         <hr>
-                        <p class="all-classes-filter"><b>Ages 3-6</b></p>
-                        <p class="all-classes-filter"><b>Ages 6-9</b></p>
-                        <p class="all-classes-filter"><b>Ages 9-12</b></p>
-                        <p class="all-classes-filter"><b>Ages 12-15</b></p>
+                        <p class="all-classes-filter" onclick="ages3_6()"><b>Ages 3-6</b></p>
+                        <p class="all-classes-filter" onclick="ages6_9()"><b>Ages 6-9</b></p>
+                        <p class="all-classes-filter" onclick="ages8_12()"><b>Ages 9-12</b></p>
+                        <p class="all-classes-filter" onclick="ages12_15()"><b>Ages 12-15</b></p>
                     </div>
 
                     <div class="col-md-9">
 
-                        <h1 style="font-weight: bold;">Drawing</h1>
+                        <h1 style="font-weight: bold;" id="classTitle">All Classes</h1>
                         <hr>
 
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="class-modal">
+                        <div id="classContainer">
 
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="class-modal">
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="class-modal">
-
-                                </div>
-                            </div>
                         </div>
-
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="class-modal">
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="class-modal">
-
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="class-modal">
-
-                                </div>
-                            </div>
-                        </div>
-
-                        
 
                     </div>
                 </div>
