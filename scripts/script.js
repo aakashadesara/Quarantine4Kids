@@ -184,3 +184,18 @@ function ages12_15() {
     $("#classTitle").html("Ages 12-15")
     getAgeClasses("12-15");
 }
+
+// Resources
+function goToInnerArtists() {
+    window.open( 
+        "https://docs.google.com/presentation/d/1LBa0FGergME2v215YNUV9Hl43MCSaUPR1qgVqP4GJsg/edit?fbclid=IwAR1rzBQeIMvKaVVBAqZffH0qwUSFYpO7aD1f0m8Jf9qanz_8pLKbLUGsyl8#slide=id.g76dd172e27_0_7", 
+        "_blank"
+    ); 
+}
+
+function goToPreviousReadings() {
+    window.open(
+        "https://docs.google.com/spreadsheets/d/1Fh7FpTuZdxJtGld3uG5Fep7wsCyU9IS6Czff3_WDIF4/edit?usp=sharing",
+        "_blank"
+    );
+}

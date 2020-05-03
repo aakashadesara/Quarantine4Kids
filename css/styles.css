@@ -176,6 +176,28 @@ html {
     padding-top: 80px;
 }
 
+.get-involved-text {
+    font-size: x-large;
+    color: white !important;
+}
+
+.get-involved-text-inverse {
+    font-size: x-large;
+    color: #FC515C !important;
+    background-color: white;
+    text-align: center;
+    padding: 5px
+}
+
+.get-involved-text-inverse:hover {
+    font-size: x-large;
+    color: #FC515C !important;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    opacity: 0.8;
+}
+
 /* who we support */
 .support-text {
     font-size: x-large;
@@ -201,6 +223,10 @@ html {
     background-color: #4C58E0;
     padding: 50px;
     padding-top: 80px;
+}
+
+.resource-divs:hover {
+    opacity: 0.8;
 }
 
 /* footer */
