@@ -67,6 +67,9 @@ function addClass(workshop, color) {
     const descr = workshop.descr;
     const age = workshop.age;
     const type = workshop.type;
+    const date = workshop.date;
+
+    console.log(link)
 
     
     var addition = '<div class="col-md-4" style="float: left;">' + 
@@ -83,6 +86,9 @@ function addClass(workshop, color) {
                                     '<p style="font-weight: bold; font-size: medium; margin: 0px; color: #777; margin-left: 15px;">Ages ' +
                                         age + ' (' + type + ')' +
                                     '</p>' +
+                                    '<p style="font-weight: bold; font-size: medium; margin: 0px; color: ' + color + ' !important; margin-left: 15px;">' +
+                                        date +
+                                    '</p>' +
                                 '</div>' + 
                             '</div>' +
                             '<div>' +
@@ -90,13 +96,16 @@ function addClass(workshop, color) {
                                     descr +
                                 '</p>' +
                                 '<p style="color: ' + color + '; margin: 0px; text-align: center;" class="col-md-12">100% Free</p>' +
-                                    '<button class="col-md-8 offset-md-2 signupbutton white" style="background-color: ' + color + ';" href="' + 
-                                        link +
-                                    '">Sign Up</button><br><br>' +
+                                    '<button class="col-md-8 offset-md-2 signupbutton white" style="background-color: ' + color + ';" onclick="launchInNewTab(' + "'" + link + "'" + ')" target="_blank">Sign Up</button><br><br>' +
                             '</div>' +
                         '</div>' +
                     '</div>';
     $("#classContainer").html($("#classContainer").html() + addition);
+}
+
+function launchInNewTab(link) {
+    console.log(link)
+    window.open(link, "_blank");
 }
 
 // Filter Methods
