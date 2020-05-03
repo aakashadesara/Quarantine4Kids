@@ -185,7 +185,7 @@ function ages12_15() {
     getAgeClasses("12-15");
 }
 
-// Resources
+// Links
 function goToInnerArtists() {
     window.open( 
         "https://docs.google.com/presentation/d/1LBa0FGergME2v215YNUV9Hl43MCSaUPR1qgVqP4GJsg/edit?fbclid=IwAR1rzBQeIMvKaVVBAqZffH0qwUSFYpO7aD1f0m8Jf9qanz_8pLKbLUGsyl8#slide=id.g76dd172e27_0_7", 
@@ -198,4 +198,38 @@ function goToPreviousReadings() {
         "https://docs.google.com/spreadsheets/d/1Fh7FpTuZdxJtGld3uG5Fep7wsCyU9IS6Czff3_WDIF4/edit?usp=sharing",
         "_blank"
     );
+}
+
+function goToGoFundMe() {
+    window.open(
+        "https://www.gofundme.com/f/quarantine4kids-campaign-for-feeding-america",
+        "_blank"
+    );
+}
+
+function goToDonate() {
+    location.href = "#donate"
+}
+
+function goToVolunteerForm() {
+    window.open(
+        "https://docs.google.com/forms/d/e/1FAIpQLSc5mGcTubwFFM0k26DyD36S7m4H0qMhz5AQsyIRA9zKqS1RUA/viewform",
+        "_blank"
+    );
+}
+
+function goToClasses() {
+    location.href = "#classes"
+}
+
+function goToResources() {
+    location.href = "#resources"
+}
+
+function goToGetInvolved() {
+    location.href= "#getInvolved"
+}
+
+function goToMailingListForm() {
+    alert("TO-DO!")
 }
