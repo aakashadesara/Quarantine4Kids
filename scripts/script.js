@@ -215,7 +215,7 @@ function goToVolunteerForm() {
     window.open(
         "https://docs.google.com/forms/d/e/1FAIpQLSc5mGcTubwFFM0k26DyD36S7m4H0qMhz5AQsyIRA9zKqS1RUA/viewform",
         "_blank"
-    );
+    )
 }
 
 function goToClasses() {
@@ -231,5 +231,13 @@ function goToGetInvolved() {
 }
 
 function goToMailingListForm() {
-    alert("TO-DO!")
+    window.open(
+        "https://docs.google.com/forms/d/e/1FAIpQLScE5amDxce6X7Gtg0eo6qJalwq2KuqZbU616M3JTTsaD5JJVA/viewform",
+        "_blank"
+    );
 }
+
+function emailQ4K() {
+    window.open('mailto:quarantine4kids@gmail.com');
+}
+
