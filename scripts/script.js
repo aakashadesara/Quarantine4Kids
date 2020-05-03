@@ -45,18 +45,14 @@ function addWorkshops(workshopList) {
     workshopList.forEach(function(workshop) {
 
         addClass(workshop, colors[count % 4]);
+
         count++;
 
     });
 }
 
-function addStartRow() {
-    let addition = '<div class="row">';
-    $("#classContainer").html($("#classContainer").html() + addition);
-}
-
-function addEndRow() {
-    let addition = '</div>';
+function addBreak() {
+    let addition = '<br class="col-md-12" style="height: 100px">';
     $("#classContainer").html($("#classContainer").html() + addition);
 }
 
