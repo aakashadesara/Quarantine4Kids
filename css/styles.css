@@ -198,6 +198,19 @@ html {
     opacity: 0.8;
 }
 
+.get-involved-button {
+    color: #FC515C !important;
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    outline: none;
+    border: none;
+    font-size: x-large;
+}
+
 /* who we support */
 .support-text {
     font-size: x-large;
