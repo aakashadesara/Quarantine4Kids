@@ -12,6 +12,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 var db = firebase.database();
+var ageOptions = new Set()
 
 $( document ).ready(function() {
 
@@ -61,12 +62,17 @@ function addClass(workshop, color) {
     const name = workshop.name;
     const link = workshop.link;
     const descr = workshop.descr;
-    const age = workshop.age;
+    const ageString = workshop.age;
+    const ages = ageString.split("-")
+    const lower = parseInt(ages[0]);
+    const upper = parseInt(ages[1]); 
     const type = workshop.type;
     const date = workshop.date;
 
-    console.log(link)
-
+    for (var i = lower; i <= upper; i++ ){ 
+        addAgeGroup(i);
+    }    
+    updateAgeGroups();
     
     var addition = '<div class="col-md-4" style="float: left;">' + 
                         '<div class="class-modal" style="padding: 20px; border-bottom: solid 10px ' + color + ';">' +
@@ -80,7 +86,7 @@ function addClass(workshop, color) {
                                         name +
                                     '</p>' +
                                     '<p style="font-weight: bold; font-size: medium; margin: 0px; color: #777; margin-left: 15px;">Ages ' +
-                                        age + ' (' + type + ')' +
+                                     lower + "-" + upper + ' (' + type + ')' +
                                     '</p>' +
                                     '<p style="font-weight: bold; font-size: medium; margin: 0px; color: ' + color + ' !important; margin-left: 15px;">' +
                                         date +
@@ -99,8 +105,26 @@ function addClass(workshop, color) {
     $("#classContainer").html($("#classContainer").html() + addition);
 }
 
+function addAgeGroup(age){
+    ageOptions.add(age)
+}
+
+function updateAgeGroups() {
+    console.log("updateAgeGroup")
+    $("#age_group_container").html("")
+    ageOptions.forEach((num) => {
+        $("#age_group_container").html(
+            $("#age_group_container").html() + 
+            '<p class="all-classes-filter" onclick="filterByAge(' + num + ')"><b>' + num + ' Years Old</b></p>')
+    })
+}
+
+function filterByAge(age) {
+    $("#classContainer").html("")
+    getAgeClassesSingle(age);
+}
+
 function launchInNewTab(link) {
-    console.log(link)
     window.open(link, "_blank");
 }
 
@@ -140,6 +164,29 @@ function getAgeClasses(filter) {
         addWorkshops(workshopList)
       });
 }
+
+function getAgeClassesSingle(age) {
+    db.ref('/classes').once('value').then(function(snapshot) {
+        const data = snapshot.val();
+        const keys = Object.keys(data);
+
+        var workshopList = [];
+        for (var i = 0; i < keys.length; i++) {
+            var obj = data[keys[i]];
+
+            const ages = obj.age.split("-");
+            const lower = ages[0];
+            const upper = ages[1];
+
+            if (lower <= age && age <= upper) {
+                workshopList.push(obj);
+            }
+        }
+
+        addWorkshops(workshopList)
+      });
+}
+
 
 function allClasses() {
     $("#classContainer").html("");
