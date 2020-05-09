@@ -70,6 +70,7 @@ function addClass(workshop, color) {
     const upper = parseInt(ages[1]); 
     const type = workshop.type;
     const date = workshop.date;
+    const teacher = workshop.teacher;
 
     for (var i = lower; i <= upper; i++ ){ 
         addAgeGroup(i);
@@ -92,6 +93,9 @@ function addClass(workshop, color) {
                                     '</p>' +
                                     '<p style="font-weight: bold; font-size: medium; margin: 0px; color: ' + color + ' !important; margin-left: 15px;">' +
                                         date +
+                                    '</p>' +
+                                    '<p style="margin-left: 15px; margin-bottom: 0px;">Teacher: ' + 
+                                         teacher  +
                                     '</p>' +
                                 '</div>' + 
                             '</div>' +
