@@ -78,7 +78,7 @@ function addClass(workshop, color) {
     updateAgeGroups();
     
     var addition = '<div class="col-md-4" style="float: left;">' + 
-                        '<div class="class-modal" style="padding: 20px; border-bottom: solid 10px ' + color + ';">' +
+                        '<div class="class-modal" style="padding: 20px; border: solid 4px ' + color + '; border-radius: 10px;">' +
                             '<img class="class-modal-img" src="' + 
                             photo + 
                             '"/>' + 
@@ -100,7 +100,7 @@ function addClass(workshop, color) {
                                 '</div>' + 
                             '</div>' +
                             '<div>' +
-                                '<p style="font-weight: bold; font-size: smaller; margin: 0px; margin-left: 15px; margin-right: 15px; padding-bottom: 20px;">' +
+                                '<p style="font-weight: bold; font-size: smaller; margin: 0px; margin-left: 15px; margin-right: 15px; padding-bottom: 20px; height: 100px;">' +
                                     descr +
                                 '</p>' +
                                 '<p style="color: ' + color + '; margin: 0px; text-align: center;" class="col-md-12">100% Free</p>' +
