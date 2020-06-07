@@ -13,6 +13,7 @@ firebase.initializeApp(firebaseConfig);
 
 var db = firebase.database();
 var ageOptions = new Set()
+var classTypeOptions = new Set()
 
 $( document ).ready(function() {
 
@@ -75,7 +76,10 @@ function addClass(workshop, color) {
     for (var i = lower; i <= upper; i++ ){ 
         addAgeGroup(i);
     }    
+    addClassTypeOption(type)
+
     updateAgeGroups();
+    updateTypeOptions();
     
     var addition = '<div class="col-md-4" style="float: left;">' + 
                         '<div class="class-modal" style="padding: 20px; border: solid 4px ' + color + '; border-radius: 10px;">' +
@@ -115,6 +119,10 @@ function addAgeGroup(age){
     ageOptions.add(age)
 }
 
+function addClassTypeOption(type) {
+    classTypeOptions.add(type.toLowerCase())
+}
+
 function updateAgeGroups() {
     console.log("updateAgeGroup")
     $("#age_group_container").html("")
@@ -125,9 +133,23 @@ function updateAgeGroups() {
     })
 }
 
+function updateTypeOptions() {
+    $("#type_option_container").html("")
+    classTypeOptions.forEach((type) => {
+        $("#type_option_container").html(
+            $("#type_option_container").html() + 
+            '<p class="all-classes-filter" onclick="filterByType(' + "'" + type.trim() +  "'" + ')"><b>' + type + '</b></p>')
+    });
+} 
+
 function filterByAge(age) {
     $("#classContainer").html("")
     getAgeClassesSingle(age);
+}
+
+function filterByType(type) {
+    $("#classContainer").html("")
+    getTypeClassesSingle(type);
 }
 
 function launchInNewTab(link) {
@@ -136,6 +158,9 @@ function launchInNewTab(link) {
 
 // Filter Methods
 function getFilteredClasses(filter) {
+
+    filter = filter.toLowerCase();
+
     db.ref('/classes').once('value').then(function(snapshot) {
         const data = snapshot.val();
         const keys = Object.keys(data);
@@ -144,7 +169,7 @@ function getFilteredClasses(filter) {
         for (var i = 0; i < keys.length; i++) {
             var obj = data[keys[i]];
 
-            if (obj.type === filter) {
+            if (obj.type.toLowerCase() === filter) {
                 workshopList.push(obj);
             }
         }
@@ -191,6 +216,10 @@ function getAgeClassesSingle(age) {
 
         addWorkshops(workshopList)
       });
+}
+
+function getTypeClassesSingle(type) {
+    getFilteredClasses(type)
 }
 
 
