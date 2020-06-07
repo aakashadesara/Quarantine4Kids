@@ -129,7 +129,7 @@ function updateAgeGroups() {
     ageOptions.forEach((num) => {
         $("#age_group_container").html(
             $("#age_group_container").html() + 
-            '<p class="all-classes-filter" onclick="filterByAge(' + num + ')"><b>' + num + ' Years Old</b></p>')
+            '<p class="all-classes-filter clickable" onclick="filterByAge(' + num + ')"><b>' + num + ' Years Old</b></p>')
     })
 }
 
@@ -138,7 +138,7 @@ function updateTypeOptions() {
     classTypeOptions.forEach((type) => {
         $("#type_option_container").html(
             $("#type_option_container").html() + 
-            '<p class="all-classes-filter" onclick="filterByType(' + "'" + type.trim() +  "'" + ')"><b>' + type + '</b></p>')
+            '<p class="all-classes-filter clickable" onclick="filterByType(' + "'" + type.trim() +  "'" + ')"><b>' + type + '</b></p>')
     });
 } 
 

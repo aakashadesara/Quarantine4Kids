@@ -5,6 +5,10 @@
     padding: 0px;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 html {
     scroll-behavior: smooth;
   }
