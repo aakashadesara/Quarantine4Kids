@@ -100,6 +100,16 @@ html {
     border: none;
 }
 
+/* staff page */
+.staff-top-header {
+    background-color: #FC515C;
+    padding: 50px;
+    padding-top: 80px;
+}
+
+.staff-subtitle {
+    font-size: large;
+}
 
 /* how it works */
 .how-it-works {
@@ -171,6 +181,30 @@ html {
     right: 0;
     position: absolute;
     width: 20%;
+}
+
+/* get involved (staff) */
+.get-involved-staff {
+    background-color: #27AAE2;
+    padding: 50px;
+    padding-top: 80px;
+}
+
+.get-involved-text-inverse-staff {
+    font-size: x-large;
+    color: #27AAE2 !important;
+    background-color: white;
+    text-align: center;
+    padding: 5px
+}
+
+.get-involved-text-inverse-staff:hover {
+    font-size: x-large;
+    color: #27AAE2 !important;
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+    opacity: 0.8;
 }
 
 /* get involved */
