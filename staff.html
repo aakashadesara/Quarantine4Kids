@@ -1,0 +1,390 @@
+<!-- TO-DOS:
+   [] Make corner images disappear if screen too small
+
+-->
+
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="assets/logo.png" />
+        <title>Quarantine4Kids</title>
+
+
+        <script
+            src="https://code.jquery.com/jquery-3.5.0.js"
+            integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- NAV BAR -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="row col-md-4 offset-md-2">
+                <img src="assets/logo.png" class="navbar-logo">
+                <p class="logo-text lilita">quarantine4kids</p>
+            </div>
+            
+            <div class="collapse navbar-collapse col-md-4" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link navtab red" onclick="goToClasses()">register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navtab teal" onclick="goToResources()">resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navtab blue" onclick="goToDonate()">
+                        support us
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- TOP SECTION -->
+        <div class="col-md-12 no-padding staff-top-header">
+            <div class="col-md-8 offset-md-2 staff-top-header">
+                <div class="row">
+
+                    <div class="col-md-3 how-divs">
+                        <img height="200px" src="assets/verified.png"/>
+                    </div>
+
+                    <div class="col-md-9">
+                        <h1 class="white lilita">Quarantine4Kids Instructors</h1>
+                        <br>
+                        <p class="white staff-subtitle">Our instructors are students from across the country. Some of the universities we represent include UC Berkeley, University of Florida, and University of San Francisco.</p>
+                        <p class="white staff-subtitle">All Quarantine4Kids instructors are interviewed and thoroughly vetted prior to becoming a staff member. Please email us if there are any concerns!</p>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+         <!-- Staff Container -->
+         <div class="col-md-12 no-padding white-section">
+            <img src="assets/support-bottom-left.png" class="support-bottom-left"/>
+            <img src="assets/support-top-right.png" class="support-top-right"/>
+            <div class="col-md-8 offset-md-2 white-section">
+                <a name="donate"></a>
+
+                <h1 class="lilita black">Quarantine4Kids Staff</h1>
+                <br><br>
+
+                <div id="staff-container">
+                    
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="assets/profiles/aakash.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Aakash Adesara</p>
+                            <p style="text-align: center;">Computer Science graduate from UC Berkeley. I teach Art and Reading classes and am currently based in Cupertino, CA!</p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/profiles/maitri.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Maitri Shah</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/profiles/cathleen.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Cathleen Jia</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/profiles/vibha.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Vibha Seshadri</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="assets/profiles/sonia.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Sonia Salunke</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/profiles/vyom.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Vyom Thakkar</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/profiles/lily.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Lilyanna Fu</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/profiles/cindy.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Cindy Tang</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="assets/profiles/kamesh.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Kamesh Vedula</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/profiles/divya.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Divya Rodrigues</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/profiles/gabriela.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Gabriela Baxtrom</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/profiles/blanche.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Blanche Pinto</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="assets/profiles/kyle.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Kyle Kranen</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/blue-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Swathi Sukumar</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/red-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Radhika Dhomse</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/blue-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Madalyn Miles</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="assets/blue-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Sachi Kulkarni</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/red-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Lienna Chan</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/blue-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Zoe Chen</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/red-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Bijal Patel</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="assets/profiles/kyle.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Kyle Kranen</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/blue-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Swathi Sukumar</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/red-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Radhika Dhomse</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                        <div class="col-md-3">
+                            <img src="assets/blue-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Madalyn Miles</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                    </div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="assets/red-blob.png" style="width: 60%; height: auto; margin-left: 20%; margin-bottom: 10px;">
+                            
+                            <br>
+                            <p style="font-size: x-large; font-weight: bold; text-align: center;">Samhita Iyer</p>
+                            <p style="text-align: center;"></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+               
+
+            </div>
+        </div>
+        
+        <!-- Get involved -->
+        <div class="col-md-12 no-padding get-involved-staff">
+            <div class="col-md-8 offset-md-2 get-involved-staff">
+                <a href="getInvolved"></a>
+                <h1 class="lilita white">Get Involved</h1>
+
+                <div class="row">
+                    <div class="col-md-7" style="padding: 0px; padding-top: 20px;">
+
+                        <p class="get-involved-text">
+                            There are many ways that you can help us out. We are looking for people to help us with many different tasks: marketing, advocating, and instructing to name a few. 
+                        </p>
+
+                        <p class="get-involved-text-inverse-staff bold" onclick="goToVolunteerForm()">
+                            Volunteer Interest Form
+                        </p>
+                        
+                        <p class="get-involved-text">
+                            For other inquiries, shoot us an email and let us know how you want to help out.
+                        </p>
+
+
+                        <p class="get-involved-text-inverse-staff bold" onclick="emailQ4K()">
+                            Email us at: quarantine4kids@gmail.com 
+                        </p>
+
+                        <p class="get-involved-text">
+                            We look forward to hearing from you! 
+                        </p>
+                    </div>
+
+                    <div class="col-md-5">
+                        <img class="image-header" src="assets/staff-alert.png" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- Footer -->
+         <div class="col-md-12 no-padding">
+             <img src="assets/footer-bottom-right.png" class="footer-bottom-right"/>
+
+            <div class="col-md-8 offset-md-2 footer row">
+                <div class="col-md-6">
+                    <p class="footer-text">Our mission is to nourish youth minds
+                        regardless of the circumstance.</p>
+
+                    <p class="footer-text"><b onclick="goToGoFundMe()">Donate</b> or <b onclick="goToVolunteerForm()">volunteer</b> today!</p>
+                </div>
+
+                <div class="col-md-2 offset-md-2">
+                    <p class="footer-tabs"><u>About</u></p>
+                    <p class="footer-tabs clickable">The Team</p>
+                </div>
+
+                <div class="col-md-2">
+                    <p class="footer-tabs"><u>Contact</u></p>
+                    <p class="footer-tabs clickable" onclick="emailQ4K()">Email Us</p>
+                    <p class="footer-tabs clickable" onclick="goToMailingListForm()">Join the Mailing List</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
