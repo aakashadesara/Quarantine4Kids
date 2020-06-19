@@ -56,7 +56,7 @@ function addWorkshops(workshopList) {
 }
 
 function addBreak() {
-    let addition = '<br class="col-md-12" style="height: 100px">';
+    let addition = '<br class="col-md-12 animate__animated animate__fadeIn" style="height: 100px">';
     $("#classContainer").html($("#classContainer").html() + addition);
 }
 
@@ -81,7 +81,7 @@ function addClass(workshop, color) {
     updateAgeGroups();
     updateTypeOptions();
     
-    var addition = '<div class="col-md-4" style="float: left;">' + 
+    var addition = '<div class="col-md-4 animate__animated animate__fadeIn" style="float: left;">' + 
                         '<div class="class-modal" style="padding: 20px; border: solid 4px ' + color + '; border-radius: 10px;">' +
                             '<img class="class-modal-img" src="' + 
                             photo + 
@@ -129,7 +129,7 @@ function updateAgeGroups() {
     ageOptions.forEach((num) => {
         $("#age_group_container").html(
             $("#age_group_container").html() + 
-            '<p class="all-classes-filter clickable" onclick="filterByAge(' + num + ')"><b>' + num + ' Years Old</b></p>')
+            '<p class="all-classes-filter clickable animate__animated animate__fadeIn" onclick="filterByAge(' + num + ')"><b>' + num + ' Years Old</b></p>')
     })
 }
 
