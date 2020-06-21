@@ -28,6 +28,16 @@ const colors = [
     "#555"
 ];
 
+function sortWorkshopList(l) {
+    l.sort((a,b) => {
+        if (a['date'] > b['date']) {
+            return 1
+        } else {
+            return -1
+        }
+    })
+}
+
 function getAllClasses() {
     db.ref('/classes').once('value').then(function(snapshot) {
         const data = snapshot.val();
@@ -38,6 +48,7 @@ function getAllClasses() {
             workshopList.push(data[keys[i]]);
         }
 
+        sortWorkshopList(workshopList)
         addWorkshops(workshopList)
       });
 }
@@ -126,7 +137,12 @@ function addClassTypeOption(type) {
 function updateAgeGroups() {
     console.log("updateAgeGroup")
     $("#age_group_container").html("")
-    ageOptions.forEach((num) => {
+
+    var ageOptionsList = []
+    ageOptions.forEach(val => ageOptionsList.push(val))
+    ageOptionsList.sort((a,b) => {return parseInt(a) - parseInt(b)})
+
+    ageOptionsList.forEach((num) => {
         $("#age_group_container").html(
             $("#age_group_container").html() + 
             '<p class="all-classes-filter clickable animate__animated animate__fadeIn" onclick="filterByAge(' + num + ')"><b>' + num + ' Years Old</b></p>')
@@ -173,7 +189,7 @@ function getFilteredClasses(filter) {
                 workshopList.push(obj);
             }
         }
-
+        sortWorkshopList(workshopList)
         addWorkshops(workshopList)
       });
 }
@@ -191,7 +207,7 @@ function getAgeClasses(filter) {
                 workshopList.push(obj);
             }
         }
-
+        sortWorkshopList(workshopList)
         addWorkshops(workshopList)
       });
 }
@@ -213,7 +229,7 @@ function getAgeClassesSingle(age) {
                 workshopList.push(obj);
             }
         }
-
+        sortWorkshopList(workshopList)
         addWorkshops(workshopList)
       });
 }
