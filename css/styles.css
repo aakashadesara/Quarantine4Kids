@@ -5,6 +5,17 @@
     padding: 0px;
 }
 
+.grayscale {
+    transition: all .35s ease-in-out;
+    filter: grayscale(1);
+}
+
+.grayscale:hover {
+    transition: all .35s ease-in-out;
+    filter: grayscale(0);
+}
+
+
 .clickable {
     cursor: pointer;
 }

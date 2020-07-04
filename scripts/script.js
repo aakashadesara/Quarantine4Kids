@@ -305,7 +305,7 @@ function goToPreviousReadings() {
 
 function goToGoFundMe() {
     window.open(
-        "https://www.gofundme.com/f/quarantine4kids-campaign-for-feeding-america",
+        "https://www.gofundme.com/f/quarantine4kids-campaign-reach-out-and-read",
         "_blank"
     );
 }
