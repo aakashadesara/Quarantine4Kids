@@ -110,13 +110,6 @@ function addClass(workshop, color) {
                                     '</p>' +
                                 '</div>' + 
                             '</div>' +
-                            '<div>' +
-                                '<p style="font-weight: bold; font-size: smaller; margin: 0px; margin-left: 15px; margin-right: 15px; padding-bottom: 20px; height: 130px; overflow-y: scroll;">' +
-                                    descr +
-                                '</p>' +
-                                '<p style="color: ' + color + '; margin: 0px; text-align: center;" class="col-md-12">100% Free</p>' +
-                                    '<button class="col-md-8 offset-md-2 signupbutton white" style="background-color: ' + color + ';" onclick="launchInNewTab(' + "'" + link + "'" + ')" target="_blank">Sign Up</button><br><br>' +
-                            '</div>' +
                         '</div>' +
                     '</div>';
     $("#classContainer").html($("#classContainer").html() + addition);
