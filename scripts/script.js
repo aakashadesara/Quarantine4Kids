@@ -56,11 +56,7 @@ function getAllClasses() {
 function addWorkshops(workshopList) {
     var count = 0;
     workshopList.forEach(function(workshop) {
-
-        if(workshop['status'] === 'active') {
-            addClass(workshop, colors[count % 4]);
-        }
-
+        addClass(workshop, colors[count % 4]);
         count++;
 
     });
